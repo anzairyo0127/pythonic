@@ -1,0 +1,12 @@
+version: "3"
+services:
+    nic:
+        build: .
+        image: pythonic_custom:1.0
+        container_name: pythonic_ctr
+        environment:
+            TZ: "Asia/Tokyo"
+        volumes:
+            - "./share:/var/share"
+        stdin_open: true
+        tty: true
